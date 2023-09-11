@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+    font-family: 'Indie Flower', cursive !important;
+    background: #fde3a7;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+::selection {
+    background: transparent;
+}
+
+h4 {
+    font-size: 26px;
+    line-height: 1px;
+    font-family: 'Amatic SC', cursive !important;
+}
+
+h1 {
+    font-size: 10px;
+    font-style: italic;
+    size: 30px;
+}
+
+
+.color1 {
+    color: #1bbc9b;
+}
+
+.color2 {
+    color: #c0392b;
+}
+
+.audio-container {
+    text-align: center;
+    margin: 20px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgb(154, 127, 60)
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #b0a14c;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-curent-time-display{
+    background-color: #3f422e;
+}
+audio::-webkit-media-controls-curent-time-remaining-display{
+    background-color: #dee5b8;
+}
+audio::-webkit-media-controls-timeline{
+    border-radius: 40px;
+    background-color: rgb(154, 127, 60);
+}
+audio::-webkit-media-controls-slider{
+    background-color: #3e4222;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+audio::-webkit-media-controls-mute-button{
+    background-color: #b0a14c;
+    border-radius: 50%;
+}
+.card {
+    color: #013243;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    background: #e0e1dc;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #bac1ba;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #afbbb6;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+.card .imgBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: .7s;
+}
+
+.card .bark {
+    position: absolute;
+    background: #e0e1dc;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s;
+}
+
+.card .imgBox img {
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-135deg);
+}
+
+.card:hover {
+    opacity: 1;
+    transition: .6s;
+    box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    z-index: -1;
+    margin-top: 70px;
+}
+
+.card .details h4 {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
